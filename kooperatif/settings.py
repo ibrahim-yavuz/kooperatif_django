@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'kooperatif_api',
     'bootstrap5',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
