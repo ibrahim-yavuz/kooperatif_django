@@ -25,7 +25,6 @@
             <table class="table table-dark table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">ID</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Second Name</th>
                     <th scope="col">Shares</th>
@@ -33,12 +32,11 @@
                 </thead>
                 <tbody>
                 <body>
-                {% for payer in payers %}
+                {% for pay_record in pay_records %}
                 <tr>
-                    <th scope="row">{{payer.pk}}</th>
-                    <td>{{payer.first_name}}</td>
-                    <td>{{payer.second_name}}</td>
-                    <td>{{payer.shares}}</td>
+                    <td>{{pay_record.payer.first_name}} {{pay_record.payer.second_name}}</td>
+                    <td>{{pay_record.paid_shares}}</td>
+                    <td>{{pay_record.pay_date}}</td>
                 </tr>
                 {% endfor %}
                 </body>
